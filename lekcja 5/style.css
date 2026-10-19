@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 15%);
+}
+
+.postcard {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  /* TODO: background sky gradient */
+  background: #020024;
+background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(63, 63, 232, 1) 0%, rgba(0, 212, 255, 1) 100%);
+}
+
+.sun {
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  width: 80px;
+  height: 80px;
+  /* TODO: sun shape and glow */
+ box-shadow: 10px 11px 82px 10px rgba(237,210,62,0.75);
+-webkit-box-shadow: 10px 11px 82px 10px rgba(237,210,62,0.75);
+-moz-box-shadow: 10px 11px 82px 10px rgba(237,210,62,0.75);
+  /* TODO: sun color experiment */
+border-radius: 200px 200px 200px 200px;
+-webkit-border-radius: 200px 200px 200px 200px;
+-moz-border-radius: 200px 200px 200px 200px;
+background: #ffef7d;
+border: 60px solid #faff4a;
+}
+
+.hills {
+  position: absolute;
+  bottom: 30%;
+  left: -10%;
+  width: 120%;
+  height: 45%;
+  /* TODO: hills shape */
+  background: radial-gradient(
+    ellipse 120% 60% at 50% 100%, 
+    rgb(33, 198, 18),
+    rgb(25, 79, 21)
+  );
+  border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+}
+
+.water {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 32%;
+  /* TODO: water color and transparency */
+  background: #222fc3;
+background: linear-gradient(0deg, rgba(34, 47, 195, 1) 0%, rgba(45, 232, 253, 0.79) 100%);
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: Georgia, serif;
+  color: hsl(50, 100%, 80%);
+  font-size: 2rem;
+  text-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.6),
+    0 0 30px hsl(45, 100%, 60%);
+}
+
+.tree {
+  position: absolute;
+  bottom: 31%;
+  left: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tree-top {
+  width: 60px;
+  height: 60px;
+  background-color: hsl(130, 55%, 35%);
+  border-radius: 50%;
+}
+
+.tree-trunk {
+  width: 14px;
+  height: 30px;
+  background-color: hsl(30, 50%, 30%);
+  margin: 0 auto;
+}
